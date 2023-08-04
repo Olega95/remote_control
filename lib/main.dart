@@ -55,7 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       onTap: () async {
                         await RemoteShortcuts.send(KeysConst.POWER);
                       },
-                      child: Icon(Icons.power_settings_new, color: Colors.white, size: 30),
+                      child: Icon(Icons.power_settings_new,
+                          color: Colors.white, size: 30),
                     ),
                     ButtonKey(
                       onTap: () async {
@@ -214,6 +215,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     ButtonKey(
                       size: ButtonSize.small,
                       color: Colors.black,
+                      withLongPress: true,
+                      withLongPressPauseDuration: 150,
                       onTap: () async {
                         await RemoteShortcuts.send(KeysConst.VOLUME_UP);
                       },
@@ -240,16 +243,21 @@ class _MyHomePageState extends State<MyHomePage> {
                     ButtonKey(
                       size: ButtonSize.small,
                       color: Colors.black,
+                      withLongPress: true,
+                      withLongPressPauseDuration: 400,
                       onTap: () async {
                         await RemoteShortcuts.send(KeysConst.CHANNEL_UP);
                       },
                       child: Center(
-                        child: Icon(Icons.keyboard_arrow_up_rounded, color: Colors.white, size: 40),
+                        child: Icon(Icons.keyboard_arrow_up_rounded,
+                            color: Colors.white, size: 40),
                       ),
                     ),
                     ButtonKey(
                       size: ButtonSize.small,
                       color: Colors.black,
+                      withLongPress: true,
+                      withLongPressPauseDuration: 150,
                       onTap: () async {
                         await RemoteShortcuts.send(KeysConst.VOLUME_DOWN);
                       },
@@ -267,17 +275,21 @@ class _MyHomePageState extends State<MyHomePage> {
                         await RemoteShortcuts.send(KeysConst.MUTE);
                       },
                       child: Center(
-                        child: Icon(Icons.volume_off, color: Colors.white, size: 40),
+                        child: Icon(Icons.volume_off,
+                            color: Colors.white, size: 40),
                       ),
                     ),
                     ButtonKey(
                       size: ButtonSize.small,
                       color: Colors.black,
+                      withLongPress: true,
+                      withLongPressPauseDuration: 400,
                       onTap: () async {
                         await RemoteShortcuts.send(KeysConst.CHANNEL_DOWN);
                       },
                       child: Center(
-                        child: Icon(Icons.keyboard_arrow_down_rounded, color: Colors.white, size: 40),
+                        child: Icon(Icons.keyboard_arrow_down_rounded,
+                            color: Colors.white, size: 40),
                       ),
                     ),
                   ],
